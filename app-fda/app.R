@@ -2,7 +2,7 @@
 source("global.R")
 
 box::use(
-  bslib[page_navbar, nav_panel, nav_spacer, nav_item],
+  bslib[page_navbar, nav_panel, nav_spacer, nav_item, tooltip],
   bsicons[bs_icon]
 )
 
@@ -20,6 +20,21 @@ ui <- page_navbar(
     ),
   nav_spacer(),
   nav_item("FDA Adverse Events Reporting System (FAERS) Public Dashboard"),
+  nav_item(
+    tooltip(
+      bs_icon("info-circle"),
+      'This page displays the report counts based on the occupation of the
+Reporter, the person who submitted the report to FDA or the person who
+submitted the report to the manufacturer (who then sent the report to
+FDA). Physicians and pharmacists are the Healthcare Professionals
+(HCPs) who submit reports to FDA most frequently.  Additional HCPs
+include nurses, dentists and other medical personnel. Reporters may
+also be classified as "Consumer", "Other" for all other Reporters who
+are not documented as Healthcare Professionals or Consumers, and "Not
+      Specified" where the occupation of the Reporter was not provided.',
+      placement = "bottom"
+    )
+  ),
   footer = tags$div(style = "padding: 4px;","Data as of December 31, 2024")
   
   
