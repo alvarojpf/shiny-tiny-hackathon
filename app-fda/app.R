@@ -35,7 +35,7 @@ are not documented as Healthcare Professionals or Consumers, and "Not
       placement = "bottom"
     )
   ),
-  footer = tags$div(style = "padding: 4px;","Data as of December 31, 2024")
+  footer = tags$div(style = "padding-left: 25px; padding-bottom: 15px;","Data as of December 31, 2024")
   
   
 )
